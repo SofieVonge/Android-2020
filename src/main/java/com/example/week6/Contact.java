@@ -29,13 +29,12 @@ public class Contact extends AppCompatActivity {
         String emailContent = email.getText().toString();
         String messageContent = message.getText().toString();
 
-        if(emailContent != null && messageContent != null)
+        if(!emailContent.matches("") && !messageContent.matches(""))
         {
             message.getText().clear();
             email.getText().clear();
             Toast.makeText(this, "Sent!", Toast.LENGTH_SHORT).show();
         } else
-
         {
             Toast.makeText(this, "Fill out both forms!", Toast.LENGTH_LONG).show();
         }
